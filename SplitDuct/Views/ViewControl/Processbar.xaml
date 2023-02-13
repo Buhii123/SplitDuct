@@ -1,0 +1,73 @@
+﻿<UserControl x:Class="SplitDuct.Views.ViewControl.Processbar"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:SplitDuct.Views.ViewControl"
+             mc:Ignorable="d" 
+        x:Name="UserCT"       
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal"
+        TextOptions.TextRenderingMode="Auto" 
+        FontFamily="{DynamicResource MaterialDesignFont}" Height="65">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Light.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Defaults.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Primary/MaterialDesignColor.DeepPurple.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Accent/MaterialDesignColor.Lime.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+    <materialDesign:ColorZone
+        Padding="16"
+        materialDesign:ElevationAssist.Elevation="Dp4"
+        ClipToBounds="False"
+        CornerRadius="5 5 0 0"
+        Mode="PrimaryDark"
+        Background="#5e61c7" Height="65">
+
+        <DockPanel>
+            <StackPanel DockPanel.Dock="Left" HorizontalAlignment="Center"
+                         Orientation="Horizontal"
+                        VerticalAlignment="Center">
+
+                <materialDesign:PackIcon HorizontalAlignment="Center"
+                                         VerticalAlignment="Center"
+                                         Kind="Basket"
+                                         Margin="0,0,20,0"/>
+                <Label  FontSize="18" Content="{Binding Tag, ElementName=UserCT}"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                   HorizontalContentAlignment="Center"
+                   VerticalContentAlignment="Center"></Label>
+
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center"
+                    Width="{Binding ElementName=UserCT, Path=Width}"
+                    Height="{Binding ElementName=UserCT, Path=Height}"
+                        DockPanel.Dock="Right">
+                <Button Background="{x:Null}" Margin="5,5,2.5,5">
+                    <StackPanel>
+                        <materialDesign:PackIcon Kind="WindowMinimize" />
+                    </StackPanel>
+                </Button>
+                <Button Click="MaxsimizeButton_Click" Background="{x:Null}" Margin="5,5,2.5,5">
+                    <StackPanel  >
+                        <materialDesign:PackIcon Kind="WindowMaximize" 
+                                            />
+                    </StackPanel>
+                </Button>
+                <Button Click="CloseButton_Click" Tag="{Binding}" Background="{x:Null}" Margin="5,5,2.5,5">
+                    <StackPanel>
+                        <materialDesign:PackIcon Kind="CloseThick"/>
+                    </StackPanel>
+                </Button>
+            </StackPanel>
+        </DockPanel>
+    </materialDesign:ColorZone>
+</UserControl>

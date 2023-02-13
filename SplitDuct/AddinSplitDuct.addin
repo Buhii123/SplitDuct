@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<RevitAddIns>
+	<AddIn Type="Application">
+		<Name>Split Duct</Name>
+		<Assembly>SplitDuct.dll</Assembly>
+		<AddInId>31766031-1086-4936-9099-A9D6560912A8</AddInId>
+		<FullClassName>SplitDuct.ApplicationRevitUI.MainAppInterface</FullClassName>
+		<VendorId>ADSK</VendorId>
+		<VendorDescription>Autodesk, www.autodesk.com</VendorDescription>
+	</AddIn>
+</RevitAddIns>
