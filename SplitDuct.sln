@@ -5,6 +5,8 @@ VisualStudioVersion = 17.4.33110.190
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SplitDuct", "SplitDuct\SplitDuct.csproj", "{9089F725-49EC-474A-A7AC-F8147960EF0A}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "installSplitDuct", "installSplitDuct\installSplitDuct.vdproj", "{E6759851-A196-4C02-84A0-7DB9846BF51E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,8 @@ Global
 		{9089F725-49EC-474A-A7AC-F8147960EF0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9089F725-49EC-474A-A7AC-F8147960EF0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9089F725-49EC-474A-A7AC-F8147960EF0A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E6759851-A196-4C02-84A0-7DB9846BF51E}.Debug|Any CPU.ActiveCfg = Debug
+		{E6759851-A196-4C02-84A0-7DB9846BF51E}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
